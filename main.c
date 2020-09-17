@@ -25,8 +25,19 @@ void capturar_enteros(){
     system("cls");
 }
 
+void mostrar(int n, char cadena[]){
+    for (size_t i = 0; i < n; i++)
+    {
+        printf("%s", cadena);
+    }
+    system("pause");
+    system("cls");
+}
+
 int main(){
     char op;
+    char cadena[20];
+    int n;
     do{
         fflush(stdin);
         printf("1) Capturar enteros\n");
@@ -42,6 +53,12 @@ int main(){
                 capturar_enteros();
                 break;
             case '2':
+                printf("Escribe una cadena de hasta 20 caracteres: ");
+                fflush(stdin);
+                fgets(cadena, sizeof(cadena), stdin);
+                printf("n: ");
+                scanf("%i", &n);
+                mostrar(n, cadena);
                 break;
             case '3':
                 break;
