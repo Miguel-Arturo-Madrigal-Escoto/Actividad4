@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <conio.h>
+#include "personaje.h"
 
 void capturar_enteros(){
     int enteros[5];
@@ -21,7 +23,7 @@ void capturar_enteros(){
 
     printf("Suma: %i\n", suma);
     printf("Promedio: %.2f\n", suma/5.0);
-    system("pause");
+    getch();
     system("cls");
 }
 
@@ -30,7 +32,7 @@ void mostrar(int n, char cadena[]){
     {
         printf("%s", cadena);
     }
-    system("pause");
+    getch();
     system("cls");
 }
 
@@ -61,8 +63,12 @@ int main(){
                 mostrar(n, cadena);
                 break;
             case '3':
+                capturar_personaje();
+                system("cls");
                 break;
             case '4':
+                mostrar_personajes();
+                system("cls");
                 break;
             default:
                 break;
