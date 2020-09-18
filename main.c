@@ -70,7 +70,10 @@ int main(){
                 mostrar_personajes();
                 system("cls");
                 break;
+            case '0':
+                break;
             default:
+                printf("Opcion invalida\n");
                 break;
         }
         
